@@ -75,6 +75,13 @@ def run_gaps():
     gap4_inc_divergence_verification()   # Always run (prints only, no output file)
 
 
+# ── Step 4: Tables ───────────────────────────────────────────────────────────
+def run_tables():
+    import generate_tables as gt
+    os.makedirs('tables', exist_ok=True)
+    gt.table1(); gt.table2(); gt.table3(); gt.table4(); gt.manuscript_numbers()
+
+
 # ── Step 3: Figures ───────────────────────────────────────────────────────────
 def run_figures():
     import generate_figures as gf
@@ -96,7 +103,8 @@ if __name__ == '__main__':
 
     step("Step 1/3 — Run 96-case simulation matrix", run_simulations)
     step("Step 2/3 — Compute gap metrics (RMSE, response time, EN50530)", run_gaps)
-    step("Step 3/3 — Generate publication figures", run_figures)
+    step("Step 3/4 — Generate publication figures", run_figures)
+    step("Step 4/4 — Generate manuscript tables", run_tables)
 
     print(f"\n{'='*60}")
     print(f"  PIPELINE COMPLETE")
