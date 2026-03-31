@@ -81,7 +81,7 @@ def rmse_total(psc, prof, alg):
 # ══════════════════════════════════════════════════════════════════════════════
 def table1():
     path = 'tables/table1_efficiency_96.csv'
-    with open(path, 'w', newline='') as f:
+    with open(path, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         # Header rows
         w.writerow(['PSC', 'Transition profile',
@@ -123,7 +123,7 @@ def table1():
 # ══════════════════════════════════════════════════════════════════════════════
 def table2():
     path = 'tables/table2_metrics_summary.csv'
-    with open(path, 'w', newline='') as f:
+    with open(path, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         w.writerow(['PSC', 'Profile', 'Algorithm',
                     'eta_total (%)', 'RMSE_total (W)', 'MAE_total (W)',
@@ -201,7 +201,7 @@ def table3():
             rows.append([PSC_LABELS[psc], ALG_LABELS[alg],
                          f'{sp_step:.1f}', f'{sp_lin:.1f}', f'{sp_sig:.1f}'])
 
-    with open(path, 'w', newline='') as f:
+    with open(path, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         w.writerow(['PSC', 'Algorithm',
                     'Step (%)', 'EN 50530 linear 10 s (%)', 'Sigmoid b=2 s (%)'])
@@ -247,7 +247,7 @@ def table4():
                                                           'amortised ~57 ops/step'],
     ]
 
-    with open(path, 'w', newline='') as f:
+    with open(path, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)
         w.writerow(['Algorithm', 'Control period',
                     'Ops per period', 'Memory variables',
