@@ -436,7 +436,7 @@ def manuscript_numbers():
     A('  - std_P_ss as a measure of steady-state oscillation magnitude')
     A('  This approach is standard in deterministic PV simulation studies.')
 
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
     print(f'  Saved: {path}')
 
