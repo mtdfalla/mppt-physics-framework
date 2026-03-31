@@ -6,10 +6,10 @@ Each PSC level runs independently and saves to JSON to prevent progress loss.
 
 PSC Patterns (from manuscript Section 2.2)
 -------------------------------------------
-Easy    : G_init=(1000,900,700)  → G_final=(1000,900,500)
-Moderate: G_init=(1000,600,400)  → G_final=(1000,600,300)
-Hard    : G_init=(1000,400,200)  → G_final=(1000,400,100)
-Extreme : G_init=(1000,300,150)  → G_final=(1000,300,50)
+Easy    : G_init=(1000,900,700)  ->G_final=(1000,900,500)
+Moderate: G_init=(1000,600,400)  ->G_final=(1000,600,300)
+Hard    : G_init=(1000,400,200)  ->G_final=(1000,400,100)
+Extreme : G_init=(1000,300,150)  ->G_final=(1000,300,50)
 
 Transition Profiles (8 total)
 ------------------------------
@@ -37,7 +37,11 @@ import time
 import argparse
 from datetime import datetime
 from typing import Dict, List, Tuple
+
 import warnings
+
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 warnings.filterwarnings('ignore')
 
 from tct_eval import default_kc200gt, evaluate_tct
@@ -212,7 +216,7 @@ def run_psc(psc_key: str, out_file: str) -> Dict:
     print(f"  PSC: {psc['label']}")
     print(f"  G_init  = {psc['G_init']}")
     print(f"  G_final = {psc['G_final']}")
-    print(f"  Output  → {out_file}")
+    print(f"  Output  -> {out_file}")
     print(f"{'='*60}")
 
     output = {
