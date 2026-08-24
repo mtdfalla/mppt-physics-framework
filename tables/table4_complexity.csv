@@ -1,0 +1,4 @@
+Algorithm,Control period,Ops per period,Memory variables,Relative complexity,Notes
+P&O,100 ms,7,3,1.0×,Scalar comparisons only
+INC,100 ms,9,3,1.3×,2 divisions per decision
+Spline-MPPT,5 s,5087,20,~16×,Scan: ~5100 ops/5 s; amortised ~110 ops/decision

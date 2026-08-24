@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: If you use this framework, please cite the associated article.
+title: Physics-Based Irradiance Transition Testing for MPPT Algorithms, simulation framework
+type: software
+authors:
+  - family-names: Abdelmagid
+    given-names: Mohamed
+  - family-names: El-Fouly
+    given-names: Tarek H. M.
+  - family-names: Maalouf
+    given-names: Maher
+license: MIT
+year: 2026

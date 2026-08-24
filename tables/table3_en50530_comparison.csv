@@ -1,0 +1,13 @@
+PSC,Algorithm,Step (%),EN 50530 linear 10 s (%),Sigmoid b=2 s (%)
+Easy,Spline-MPPT,90.9,91.3,91.1
+Easy,P&O,91.7,93.3,93.8
+Easy,INC,91.8,93.3,93.8
+Moderate,Spline-MPPT,86.2,85.9,88.6
+Moderate,P&O,80.5,82.6,83.8
+Moderate,INC,80.5,82.6,83.8
+Hard,Spline-MPPT,63.0,68.3,68.4
+Hard,P&O,36.2,39.0,40.7
+Hard,INC,36.2,38.9,72.0
+Extreme,Spline-MPPT,50.9,56.8,57.5
+Extreme,P&O,19.2,22.0,23.6
+Extreme,INC,19.2,21.7,54.1

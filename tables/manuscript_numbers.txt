@@ -1,0 +1,134 @@
+======================================================================
+MANUSCRIPT_NUMBERS.TXT — Every cited number for the revised manuscript
+Generated automatically from simulation results. DO NOT edit manually.
+Source: run_all.py → results/ → tables/
+======================================================================
+
+─── ABSTRACT / HIGHLIGHTS ──────────────────────────────────────────────
+  Total η range (all 96 cases):      19.2% – 95.1%
+  Hard PSC / Step: Spline=63.0%  P&O=36.2%  INC=36.2%  → Spline leads by +26.8 pp
+  Hard PSC / Sigmoid b=2s: Spline=68.4%  P&O=40.7%  INC=72.0%  → INC leads by +3.6 pp (REVERSAL)
+  Step testing overstates Spline advantage at Hard PSC by: +30.4 pp
+  Extreme PSC / Step:        Spline=50.9%  best-local=19.2%  → Spline leads by +31.6 pp
+  Extreme PSC / Sigmoid b=2s: Spline=57.5%  INC=54.1%  → Spline leads by +3.4 pp
+
+─── SECTION 3.1 — OVERALL PERFORMANCE ─────────────────────────────────
+  Spline-MPPT  : mean=75.8%  std=14.2%  min=50.9%  max=92.5%
+  P&O          : mean=59.4%  std=29.5%  min=19.2%  max=95.0%
+  INC          : mean=64.7%  std=26.3%  min=19.2%  max=95.1%
+
+─── SECTION 3.2 — P&O vs INC DIVERGENCE (new finding) ─────────────────
+  Mean |INC − P&O| across all 32 local-alg pairs: 5.79 pp
+  Max  |INC − P&O|:                               32.6 pp
+  Cases where |INC − P&O| > 5 pp:                 6/32
+  Cases where |INC − P&O| > 10 pp:                6/32
+  Cases where INC > Spline:                        9/32
+
+  Cases with largest INC − P&O divergence:
+    Extreme    / Sigmoid b=1 s     INC=54.6%  P&O=22.0%  diff=+32.6 pp
+    Hard       / Sigmoid b=2 s     INC=72.0%  P&O=40.7%  diff=+31.3 pp
+    Extreme    / Sigmoid b=2 s     INC=54.1%  P&O=23.6%  diff=+30.5 pp
+    Extreme    / Linear 20 s       INC=53.4%  P&O=23.7%  diff=+29.7 pp
+    Extreme    / Sigmoid b=5 s     INC=54.5%  P&O=26.3%  diff=+28.2 pp
+    Hard       / Sigmoid b=5 s     INC=67.7%  P&O=43.5%  diff=+24.2 pp
+
+─── SECTION 3.3 — EASY PSC ANALYSIS ───────────────────────────────────
+  Under Easy PSC, local algorithms outperform Spline across all profiles.
+  Reason: scan overhead (5 s) exceeds the global-search benefit at mild shading.
+  Step             : Spline=90.9%  best-local=91.8%  diff=-1.0 pp
+  Linear 5 s       : Spline=91.2%  best-local=92.7%  diff=-1.5 pp
+  Linear 10 s      : Spline=91.3%  best-local=93.3%  diff=-2.0 pp
+  Linear 20 s      : Spline=91.6%  best-local=94.4%  diff=-2.8 pp
+  Sigmoid b=0.5 s  : Spline=91.0%  best-local=92.5%  diff=-1.5 pp
+  Sigmoid b=1 s    : Spline=91.0%  best-local=93.1%  diff=-2.0 pp
+  Sigmoid b=2 s    : Spline=91.1%  best-local=93.8%  diff=-2.7 pp
+  Sigmoid b=5 s    : Spline=92.5%  best-local=95.1%  diff=-2.6 pp
+
+─── SECTION 3.4 — EN 50530 COMPARISON ─────────────────────────────────
+  EN 50530 proxy = linear_10s (10 s ramp, closest to standard)
+  Easy      : step-adv=-1.0 pp  EN50530-adv=-2.0 pp  sigmoid-adv=-2.7 pp
+  Moderate  : step-adv=+5.7 pp  EN50530-adv=+3.3 pp  sigmoid-adv=+4.8 pp
+  Hard      : step-adv=+26.8 pp  EN50530-adv=+29.4 pp  sigmoid-adv=-3.6 pp
+  Extreme   : step-adv=+31.6 pp  EN50530-adv=+34.9 pp  sigmoid-adv=+3.4 pp
+  Conclusion: EN 50530 linear ramps produce same rankings as step change.
+  Both overstate Spline advantage at Hard PSC by ~27–29 pp.
+
+─── SECTION 4 — STEADY-STATE AND RMSE METRICS ─────────────────────────
+  PSC        Profile            Alg              std_ss    RMSE_ss    MAE_ss
+  ------------------------------------------------------------------------
+  Easy       Step               Spline-MPPT       34.01W      39.76W     20.60W
+  Easy       Step               P&O                0.73W      37.23W     37.22W
+  Easy       Step               INC                0.00W      36.67W     36.67W
+  Easy       Sigmoid b=2 s      Spline-MPPT       41.69W      64.06W     48.63W
+  Easy       Sigmoid b=2 s      P&O                0.72W      37.21W     37.20W
+  Easy       Sigmoid b=2 s      INC                0.00W      37.08W     37.08W
+
+  Moderate   Step               Spline-MPPT       32.95W      43.10W     27.78W
+  Moderate   Step               P&O                0.14W      58.74W     58.74W
+  Moderate   Step               INC                0.00W      58.93W     58.93W
+  Moderate   Sigmoid b=2 s      Spline-MPPT       35.98W      46.41W     29.30W
+  Moderate   Sigmoid b=2 s      P&O                0.14W      58.74W     58.74W
+  Moderate   Sigmoid b=2 s      INC                0.00W      58.61W     58.61W
+
+  Hard       Step               Spline-MPPT       34.42W      75.62W     67.33W
+  Hard       Step               P&O                0.33W     137.21W    137.21W
+  Hard       Step               INC                0.00W     137.27W    137.27W
+  Hard       Sigmoid b=2 s      Spline-MPPT       48.38W      90.44W     76.42W
+  Hard       Sigmoid b=2 s      P&O                0.33W     137.21W    137.21W
+  Hard       Sigmoid b=2 s      INC                0.00W      26.65W     26.65W
+
+  Extreme    Step               Spline-MPPT       25.82W      92.98W     89.32W
+  Extreme    Step               P&O                0.08W     170.97W    170.97W
+  Extreme    Step               INC                0.00W     171.05W    171.05W
+  Extreme    Sigmoid b=2 s      Spline-MPPT       54.03W     108.26W     93.81W
+  Extreme    Sigmoid b=2 s      P&O                0.08W     170.97W    170.97W
+  Extreme    Sigmoid b=2 s      INC                0.00W      70.39W     70.39W
+
+
+─── SECTION 4 — RESPONSE TIME ──────────────────────────────────────────
+  Note: Spline response time = "n/a" — periodic 5 s rescan by design.
+  P&O/INC step response = 0.0 s — settle instantly to first local peak.
+  PSC        Profile               P&O RT     INC RT
+  --------------------------------------------------
+  Easy       Step                   0.0 s      0.0 s
+  Easy       Linear 10 s            9.5 s      9.5 s
+  Easy       Sigmoid b=2 s         15.9 s     15.9 s
+
+  Moderate   Step                   0.0 s      0.0 s
+  Moderate   Linear 10 s            9.4 s      9.4 s
+  Moderate   Sigmoid b=2 s         15.6 s     15.6 s
+
+  Hard       Step                   0.0 s      0.0 s
+  Hard       Linear 10 s            9.9 s      9.9 s
+  Hard       Sigmoid b=2 s         18.9 s     18.9 s
+
+  Extreme    Step                   0.0 s      0.0 s
+  Extreme    Linear 10 s            9.9 s     10.0 s
+  Extreme    Sigmoid b=2 s         18.7 s     16.8 s
+
+
+─── COMPUTATIONAL COMPLEXITY ───────────────────────────────────────────
+  P&O:           7 ops/step   (1.0×)
+  INC:           9 ops/step   (1.3×)   [2 divisions per step]
+  Spline-MPPT: ~57 ops/step   (8.1×)   [amortised; 5087 ops per 5 s scan]
+  Spline memory: 20 variables vs 3 for P&O and INC
+
+─── FIGURE CAPTION NUMBERS ─────────────────────────────────────────────
+  Fig 5 (heatmap) range:  19% – 95%
+  Fig 6 (advantage) Hard/Step: Spline leads by +27 pp
+  Fig 6 (advantage) Hard/Sig2: INC leads by +4 pp
+  Fig 7 (main finding): Hard PSC step→sigmoid swing = 30 pp
+  Fig 8 (winner matrix): INC wins in 1/32 conditions (Hard/sigmoid_2.0)
+
+─── NOTE ON STATISTICAL TESTS ──────────────────────────────────────────
+  Reviewer 2.11 requests t-tests, ANOVA, confidence intervals.
+  RESPONSE: The simulation is fully deterministic — all parameters are
+  fixed, there are no random seeds or stochastic elements. Re-running
+  any case produces bit-identical results. Therefore inferential
+  statistics (t-test, ANOVA) do not apply: there is no sampling
+  variance to characterise. What is reported instead:
+  - Distribution statistics across the 32 test conditions per algorithm
+    (mean ± std of η_total, RMSE, MAE)
+  - Per-case RMSE and MAE as absolute error metrics
+  - std_P_ss as a measure of steady-state oscillation magnitude
+  This approach is standard in deterministic PV simulation studies.
