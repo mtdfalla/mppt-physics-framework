@@ -1,0 +1,143 @@
+% Requires \usepackage{longtable,booktabs}
+\begingroup\scriptsize\setlength{\tabcolsep}{3.5pt}
+\begin{longtable}{@{}lll rr rr r rr@{}}
+\caption{Error and dynamic metrics for all 96 primary test cases (25$^\circ$C). RMSE$_\mathrm{ss}$, MAE$_\mathrm{ss}$, nRMSE$_\mathrm{ss}$, RE$_\mathrm{ss}$, and $\sigma_P$ are evaluated over the final 20\% of each simulation. $t_s$ and $t_G$ are measured from the completion of the transition as defined in Section~\ref{sec:framework}. N/A: the Spline-MPPT scan cycle precludes conventional settling. n.r.: not reached within the simulation. Under Hard and Extreme PSC, the Spline-MPPT rows of profiles with the same simulation length (linear 5, 10, and 20~s and sigmoid $b = 0.5$, 1, and 2~s) agree to within 0.01~W, because the first scan starts at the transition onset in both cases and the two profiles have nearly the same irradiance when the second scan takes place, so the two runs follow almost the same trajectory in the evaluation window.}\label{tab:app_metrics}\\
+\toprule
+PSC & Profile & Algorithm & \shortstack{RMSE$_\mathrm{ss}$\\(W)} & \shortstack{MAE$_\mathrm{ss}$\\(W)} & \shortstack{nRMSE$_\mathrm{ss}$\\(\%)} & \shortstack{RE$_\mathrm{ss}$\\(\%)} & \shortstack{$\sigma_P$\\(W)} & \shortstack{$t_s$\\(s)} & \shortstack{$t_G$\\(s)} \\
+\midrule
+\endfirsthead
+\toprule
+PSC & Profile & Algorithm & \shortstack{RMSE$_\mathrm{ss}$\\(W)} & \shortstack{MAE$_\mathrm{ss}$\\(W)} & \shortstack{nRMSE$_\mathrm{ss}$\\(\%)} & \shortstack{RE$_\mathrm{ss}$\\(\%)} & \shortstack{$\sigma_P$\\(W)} & \shortstack{$t_s$\\(s)} & \shortstack{$t_G$\\(s)} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Easy & Step & Spline-MPPT & 39.8 & 20.6 & 10.7 & 5.5 & 34.01 & N/A & 7.6 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.73 & 0.0 & n.r. \\
+ &  & INC & 36.7 & 36.7 & 9.8 & 9.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 5\,s & Spline-MPPT & 43.3 & 19.7 & 11.6 & 5.3 & 38.61 & N/A & 10.2 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 36.7 & 36.7 & 9.8 & 9.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 10\,s & Spline-MPPT & 50.9 & 35.1 & 13.6 & 9.4 & 36.84 & N/A & 5.4 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 37.1 & 37.1 & 9.9 & 9.9 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 20\,s & Spline-MPPT & 64.1 & 48.7 & 17.2 & 13.1 & 41.60 & N/A & 2.8 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 36.7 & 36.7 & 9.8 & 9.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 0.5\,s & Spline-MPPT & 44.9 & 21.0 & 12.0 & 5.6 & 39.69 & N/A & 10.3 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 36.7 & 36.7 & 9.8 & 9.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 1\,s & Spline-MPPT & 50.9 & 35.1 & 13.6 & 9.4 & 36.84 & N/A & 5.3 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 36.7 & 36.7 & 9.8 & 9.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 2\,s & Spline-MPPT & 64.1 & 48.6 & 17.2 & 13.0 & 41.69 & N/A & 2.8 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 37.1 & 37.1 & 9.9 & 9.9 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 5\,s & Spline-MPPT & 60.6 & 42.2 & 16.2 & 11.3 & 43.42 & N/A & 1.5 \\
+ &  & P\&O & 37.2 & 37.2 & 10.0 & 10.0 & 0.72 & 0.0 & n.r. \\
+ &  & INC & 36.9 & 36.9 & 9.9 & 9.9 & 0.39 & 0.0 & n.r. \\
+\addlinespace[2pt]
+Moderate & Step & Spline-MPPT & 43.1 & 27.8 & 16.6 & 10.7 & 32.95 & N/A & 9.2 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.8 & 22.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 5\,s & Spline-MPPT & 26.0 & 11.9 & 10.0 & 4.6 & 23.09 & N/A & 11.2 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.6 & 58.6 & 22.6 & 22.6 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 10\,s & Spline-MPPT & 63.9 & 51.1 & 24.7 & 19.7 & 38.42 & N/A & 6.1 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.8 & 22.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 20\,s & Spline-MPPT & 46.8 & 29.5 & 18.1 & 11.4 & 36.34 & N/A & 9.7 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.8 & 22.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 0.5\,s & Spline-MPPT & 25.6 & 11.7 & 9.9 & 4.5 & 22.73 & N/A & 11.3 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.8 & 22.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 1\,s & Spline-MPPT & 63.0 & 49.9 & 24.3 & 19.3 & 38.37 & N/A & 6.2 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.8 & 22.8 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 2\,s & Spline-MPPT & 46.4 & 29.3 & 17.9 & 11.3 & 35.99 & N/A & 9.6 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.6 & 58.6 & 22.6 & 22.6 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 5\,s & Spline-MPPT & 59.9 & 46.6 & 23.1 & 18.0 & 37.68 & N/A & 7.1 \\
+ &  & P\&O & 58.7 & 58.7 & 22.7 & 22.7 & 0.14 & 0.0 & n.r. \\
+ &  & INC & 58.9 & 58.9 & 22.7 & 22.7 & 0.26 & 0.0 & n.r. \\
+\addlinespace[2pt]
+Hard & Step & Spline-MPPT & 75.6 & 67.3 & 37.8 & 33.7 & 34.42 & N/A & 13.7 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 137.3 & 137.3 & 68.6 & 68.6 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 5\,s & Spline-MPPT & 48.2 & 32.4 & 24.1 & 16.2 & 35.63 & N/A & 8.7 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 137.1 & 137.1 & 68.5 & 68.5 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 10\,s & Spline-MPPT & 80.9 & 48.8 & 40.4 & 24.4 & 64.49 & N/A & 3.7 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 137.4 & 137.4 & 68.7 & 68.7 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 20\,s & Spline-MPPT & 90.4 & 76.4 & 45.2 & 38.2 & 48.38 & N/A & 12.1 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 138.7 & 138.7 & 69.4 & 69.4 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 0.5\,s & Spline-MPPT & 48.2 & 32.4 & 24.1 & 16.2 & 35.63 & N/A & 8.7 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 144.8 & 144.8 & 72.4 & 72.4 & 0.00 & 0.8 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 1\,s & Spline-MPPT & 80.9 & 48.8 & 40.4 & 24.4 & 64.49 & N/A & 3.7 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 146.7 & 146.7 & 73.3 & 73.3 & 0.00 & 0.1 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 2\,s & Spline-MPPT & 90.4 & 76.4 & 45.2 & 38.2 & 48.38 & N/A & 12.1 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 26.6 & 26.6 & 13.3 & 13.3 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 5\,s & Spline-MPPT & 86.7 & 64.5 & 43.4 & 32.2 & 58.01 & N/A & 0.5 \\
+ &  & P\&O & 137.2 & 137.2 & 68.6 & 68.6 & 0.33 & 0.0 & n.r. \\
+ &  & INC & 26.6 & 26.6 & 13.3 & 13.3 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+Extreme & Step & Spline-MPPT & 93.0 & 89.3 & 46.5 & 44.7 & 25.82 & N/A & 13.5 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 171.0 & 171.0 & 85.5 & 85.5 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 5\,s & Spline-MPPT & 63.0 & 39.7 & 31.5 & 19.8 & 48.90 & N/A & 8.7 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 171.0 & 171.0 & 85.5 & 85.5 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 10\,s & Spline-MPPT & 106.0 & 67.9 & 53.0 & 33.9 & 81.34 & N/A & 3.7 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 171.8 & 171.8 & 85.9 & 85.9 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Linear 20\,s & Spline-MPPT & 108.3 & 93.8 & 54.1 & 46.9 & 54.03 & N/A & 11.8 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 70.4 & 70.4 & 35.2 & 35.2 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 0.5\,s & Spline-MPPT & 63.0 & 39.7 & 31.5 & 19.8 & 48.90 & N/A & 8.7 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 172.6 & 172.6 & 86.3 & 86.3 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 1\,s & Spline-MPPT & 106.0 & 67.9 & 53.0 & 33.9 & 81.34 & N/A & 3.7 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 70.4 & 70.4 & 35.2 & 35.2 & 0.00 & 1.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 2\,s & Spline-MPPT & 108.3 & 93.8 & 54.1 & 46.9 & 54.03 & N/A & 11.8 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.08 & 0.0 & n.r. \\
+ &  & INC & 70.4 & 70.4 & 35.2 & 35.2 & 0.00 & 0.0 & n.r. \\
+\addlinespace[2pt]
+ & Sigmoid 5\,s & Spline-MPPT & 106.7 & 81.2 & 53.3 & 40.6 & 69.23 & N/A & 0.2 \\
+ &  & P\&O & 171.0 & 171.0 & 85.5 & 85.5 & 0.07 & 0.0 & n.r. \\
+ &  & INC & 70.4 & 70.4 & 35.2 & 35.2 & 0.00 & 0.0 & n.r. \\
+\end{longtable}
+\endgroup

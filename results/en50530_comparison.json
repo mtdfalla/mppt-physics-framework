@@ -1,0 +1,46 @@
+{
+  "easy": {
+    "spline_step": 90.86,
+    "spline_en50530": 91.31,
+    "spline_sig2": 91.13,
+    "best_local_step": 91.81,
+    "best_local_en50530": 93.31,
+    "best_local_sig2": 93.81,
+    "spline_adv_step": -1.0,
+    "spline_adv_en50530": -2.0,
+    "spline_adv_sig2": -2.7
+  },
+  "moderate": {
+    "spline_step": 86.2,
+    "spline_en50530": 85.9,
+    "spline_sig2": 88.63,
+    "best_local_step": 80.53,
+    "best_local_en50530": 82.64,
+    "best_local_sig2": 83.84,
+    "spline_adv_step": 5.7,
+    "spline_adv_en50530": 3.3,
+    "spline_adv_sig2": 4.8
+  },
+  "hard": {
+    "spline_step": 62.99,
+    "spline_en50530": 68.35,
+    "spline_sig2": 68.43,
+    "best_local_step": 36.18,
+    "best_local_en50530": 38.97,
+    "best_local_sig2": 71.99,
+    "spline_adv_step": 26.8,
+    "spline_adv_en50530": 29.4,
+    "spline_adv_sig2": -3.6
+  },
+  "extreme": {
+    "spline_step": 50.85,
+    "spline_en50530": 56.82,
+    "spline_sig2": 57.47,
+    "best_local_step": 19.25,
+    "best_local_en50530": 21.96,
+    "best_local_sig2": 54.12,
+    "spline_adv_step": 31.6,
+    "spline_adv_en50530": 34.9,
+    "spline_adv_sig2": 3.4
+  }
+}

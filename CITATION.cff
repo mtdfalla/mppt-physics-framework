@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: If you use this framework, please cite the associated article.
+title: "Physics-Based Irradiance Transition Testing for MPPT Algorithms: simulation framework"
+type: software
+version: 1.0.0
+date-released: "2026-10-28"
+abstract: >-
+  Deterministic simulation framework for evaluating maximum power point
+  tracking (MPPT) algorithms under step, linear-ramp, and measurement-derived
+  sigmoid irradiance transitions. It models a series string of three KC200GT
+  photovoltaic modules with bypass diodes under four partial shading levels
+  and evaluates Perturb and Observe, Incremental Conductance, and Spline-MPPT
+  on tracking efficiency, steady-state error, power ripple, settling time,
+  and GMPP acquisition time. It reproduces every result, figure, and table of
+  the associated Solar Energy article.
+authors:
+  - family-names: Abdelmagid
+    given-names: Mohamed
+    affiliation: Khalifa University
+    orcid: "https://orcid.org/0009-0000-2053-4374"
+  - family-names: El-Fouly
+    given-names: Tarek H. M.
+    affiliation: Khalifa University
+    orcid: "https://orcid.org/0000-0002-3349-417X"
+  - family-names: Maalouf
+    given-names: Maher
+    affiliation: Khalifa University
+    orcid: "https://orcid.org/0000-0003-0516-6870"
+repository-code: "https://github.com/mtdfalla/mppt-physics-framework"
+license: MIT
+keywords:
+  - maximum power point tracking
+  - partial shading
+  - photovoltaic systems
+  - irradiance transitions
+  - cloud shadow
+  - benchmarking

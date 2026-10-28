@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "n_calls": 20000,
+    "landscape": "hard PSC final state (1000/400/100 W/m2), 25 C",
+    "python": "3.13.16",
+    "numpy": "2.5.3",
+    "machine": "x86_64",
+    "note": "controller step() isolated from the plant model; spline figure amortizes its scan cycles",
+    "n_repeat": 9,
+    "decision_interval_s": 0.1
+  },
+  "us_per_step_median": {
+    "po": 11.37,
+    "inc": 10.99,
+    "spline": 12.84
+  },
+  "us_per_step_range": {
+    "po": [
+      10.29,
+      16.48
+    ],
+    "inc": [
+      9.52,
+      17.97
+    ],
+    "spline": [
+      11.28,
+      13.54
+    ]
+  },
+  "relative_to_po_median": {
+    "po": 1.0,
+    "inc": 0.97,
+    "spline": 1.13
+  }
+}
