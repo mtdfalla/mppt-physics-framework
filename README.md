@@ -1,8 +1,9 @@
 # Physics-Based Irradiance Transition Testing for MPPT Algorithms
 
-Simulation framework and results for the article *Physics-Based Irradiance
-Transition Testing Reveals Ranking Reversals in MPPT Algorithms*
-(M. Abdelmagid, T. H. M. El-Fouly and M. Maalouf, Solar Energy, 2026).
+Simulation framework and results for the article *Physics-based irradiance
+transition testing reveals ranking reversals in MPPT algorithms*
+(M. Abdelmagid, T. H. M. El-Fouly and M. Maalouf, Solar Energy 321 (2027)
+115292, https://doi.org/10.1016/j.solener.2026.115292).
 
 The framework models a series string of three KC200GT photovoltaic modules,
 each with a bypass diode, under four partial shading conditions (PSC). It
@@ -122,5 +123,12 @@ MIT License, see `LICENSE`.
 
 ## Citation
 
-Please cite the article above when using this framework. Citation metadata
-for the software are in `CITATION.cff`.
+Please cite the article when using this framework:
+
+M. Abdelmagid, T. H. M. El-Fouly, M. Maalouf, Physics-based irradiance
+transition testing reveals ranking reversals in MPPT algorithms, Solar Energy
+321 (2027) 115292. https://doi.org/10.1016/j.solener.2026.115292
+
+The archived software release is available at
+https://doi.org/10.5281/zenodo.23737201. Citation metadata are in
+`CITATION.cff`.

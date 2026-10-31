@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: If you use this framework, please cite the associated article.
+message: If you use this framework, please cite the article below.
 title: "Physics-Based Irradiance Transition Testing for MPPT Algorithms: simulation framework"
 type: software
 version: 1.0.0
@@ -12,7 +12,7 @@ abstract: >-
   and evaluates Perturb and Observe, Incremental Conductance, and Spline-MPPT
   on tracking efficiency, steady-state error, power ripple, settling time,
   and GMPP acquisition time. It reproduces every result, figure, and table of
-  the associated Solar Energy article.
+  the associated article in Solar Energy.
 authors:
   - family-names: Abdelmagid
     given-names: Mohamed
@@ -35,3 +35,25 @@ keywords:
   - irradiance transitions
   - cloud shadow
   - benchmarking
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23737201
+    description: Archived release v1.0.0
+preferred-citation:
+  type: article
+  title: "Physics-based irradiance transition testing reveals ranking reversals in MPPT algorithms"
+  authors:
+    - family-names: Abdelmagid
+      given-names: Mohamed
+      orcid: "https://orcid.org/0009-0000-2053-4374"
+    - family-names: El-Fouly
+      given-names: Tarek H. M.
+      orcid: "https://orcid.org/0000-0002-3349-417X"
+    - family-names: Maalouf
+      given-names: Maher
+      orcid: "https://orcid.org/0000-0003-0516-6870"
+  journal: Solar Energy
+  volume: 321
+  start: 115292
+  year: 2027
+  doi: 10.1016/j.solener.2026.115292
